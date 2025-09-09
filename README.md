@@ -1,14 +1,11 @@
-# itp
-My work that I'm sending to the teach
+# This is your student, Ezra Bennett
+## I'm here to pursue an academic prowess
+### This coding stuff finna be hard, but I'll lock in
 
-# This is header 1
-## This is header 2
-### This is header 3
-#### This is header 4
-##### This is header 5
-###### This is header 6
+#### Here's one of my favorite nashville quotes if you're still reading this
 
-[Click this link](https://www.google.com/search?q=chicken&oq=chicken&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIQCAEQLhjUAhixAxjJAxiABDIKCAIQABixAxiABDIQCAMQLhjUAhixAxjJAxiABDITCAQQLhiDARivARjHARixAxiABDIHCAUQABiABDINCAYQLhjHARjRAxiABDIQCAcQLhivARjHARiABBiOBTIKCAgQLhixAxiABDIKCAkQABixAxiABNIBBzU1MWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#vhid=ZbiJQdt--Z3PGM&vssid=_AkfAaKXdNdKh5NoP0P71oAI_55)
+	
+	Just because you put a puppy in the oven, don't make it a biscuit. 
+	
 
-`code code code`
-The backticks do inline code
+### I would explain this quote, but I feel that leaving it in the air for interpretation makes the meaning all the more sweeter. 
