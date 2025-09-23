@@ -4,7 +4,7 @@
 
 One thing that I knew already was that computers use binary (0s and 1s) as their foundations for all data that they recieve. 
 
-One thing that I learned from this reading was actually the trick they used to check if a value is “real” (not null or undefined) by comparing it to null with == or !=, because null == undefined is true but all other non-values are false.
+One thing that I learned from this reading was actually the trick they used to check if a value is “real” (not null or undefined) by comparing it to null with == or !=. Since null == undefined evaluates to true, this conveniently covers both cases at once, while all other values will return false.
 
 ### Chapter 2: Program Structure
 
