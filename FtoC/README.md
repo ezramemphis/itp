@@ -38,19 +38,19 @@ And the best part, this is all I had to change, the other two lines I could keep
 
 Actually there is one last thing I wanted to add, just for myself honestly to have a little fun with it. Depending on the temperature that you inputted, I wanted there to be a personalized text prompt that goes under the results and kind of let's you know what the temperature is going to feel like. It took a good bit to right it all out, but once I finished it looked like this. 
 
-`if (f <= 32) {
-  console.log("❄️ Below freezing — that's ice cold! Bundle up.");
-} else if (f > 32 && f <= 50) {
-  console.log("🧥 Pretty chilly, better grab a jacket.");
-} else if (f > 50 && f <= 70) {
-  console.log("😊 Comfortable weather, not too hot or cold.");
-} else if (f > 70 && f <= 85) {
-  console.log("🌞 Warm day — perfect for being outside.");
-} else if (f > 85 && f <= 100) {
-  console.log("🥵 Hot! Stay hydrated and find some shade.");
-} else {
-  console.log("🔥 Bro it's hot as hell! You're cooked.");
-}`
+	if (f <= 32) {
+	  console.log("❄️ Below freezing, big bro that's ice cold! Get nice and cozy.");
+	} else if (f > 32 && f <= 50) {
+	  console.log("🧥 Pretty chilly, better grab a jacket.");
+	} else if (f > 50 && f <= 70) {
+	  console.log("😊 Comfortable weather, not too hot or cold.");
+	} else if (f > 70 && f <= 85) {
+	  console.log("🌞 Warm day, perfect for being outside.");
+	} else if (f > 85 && f <= 100) {
+	  console.log("🥵 Hot! Stay hydrated and find some shade.");
+	} else {
+	  console.log("🔥 Bro it's hot as hell! You're cooked.");
+	}
 
 And in order to use this with the converter, all I had to do was put it under our already existing converter, and it was good to go. 
 
