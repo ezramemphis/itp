@@ -8,7 +8,7 @@ After that, now we have to declare what our "c" will be. This was a little more 
 
 `let c = (f - 32) * 5 / 9;`
 
-Finally, it's now time to log the results of the javascript command that we just made. And so I created a "console.log" that not only gave us the results, but looked nice and readible for the user so there would be no minunderstanding what the results are. And this is that last line that I got. 
+Finally, it's now time to log the results of the javascript command that we just made. And so I created a "console.log" that not only gave us the results, but looked nice and readible for the user so there would be no misunderstanding what the results are. And this is that last line that I got. 
 
 `console.log(f + " Fahrenheit is equal to " + c + " Celsius");`
 
@@ -34,3 +34,28 @@ Now there's one last thing that I wanted to figure out, which was to make a vers
 
 And the best part, this is all I had to change, the other two lines I could keep exactly the same. And there was no troubleshooting I had to do whatsoever, it just decided to work perfectly for me. And I made sure to test the code a bunch, and I haven't run into any errors. So I think we were able to lock in. So that's just about it, my beautiful and elegant code is in your hands. 
 
+### Personalized Text Prompts
+
+Actually there is one last thing I wanted to add, just for myself honestly to have a little fun with it. Depending on the temperature that you inputted, I wanted there to be a personalized text prompt that goes under the results and kind of let's you know what the temperature is going to feel like. It took a good bit to right it all out, but once I finished it looked like this. 
+
+`if (f <= 32) {
+  console.log("❄️ Below freezing — that's ice cold! Bundle up.");
+} else if (f > 32 && f <= 50) {
+  console.log("🧥 Pretty chilly, better grab a jacket.");
+} else if (f > 50 && f <= 70) {
+  console.log("😊 Comfortable weather, not too hot or cold.");
+} else if (f > 70 && f <= 85) {
+  console.log("🌞 Warm day — perfect for being outside.");
+} else if (f > 85 && f <= 100) {
+  console.log("🥵 Hot! Stay hydrated and find some shade.");
+} else {
+  console.log("🔥 Bro it's hot as hell! You're cooked.");
+}`
+
+And in order to use this with the converter, all I had to do was put it under our already existing converter, and it was good to go. 
+
+So now, not only do you get the results when you use the converter, but you get a little prompt kind of letting you know what to expect with the weather. And below is the website that I used to sort of guide me with making these else if statements and implementing them into the project.
+
+["else if" Tutorial](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+
+Ight now I'm finished, king out
