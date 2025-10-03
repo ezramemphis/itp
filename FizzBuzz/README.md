@@ -16,7 +16,7 @@ And then after that, it was fairly simple, just setting up some if, else if, and
 	    console.log ("FizzBuzz")
 
 
-I'll spare you too many words, I literally just copy and pasted that first line for "Fizz" and "Buzz", and then modified them for their needs, made them "else if" statements since they were in the middle, and made sure that everything was formatted correctly. And then lastly, I just put in a last "else" statement that tells the javascript man "just let the rest of those numbers slide through, they're all special to me". So this was all of that code I added. 
+After that, the rest was simply building out the other conditions. I copied the structure of the first check and adjusted it — one for numbers divisible only by 3 (which logs “Fizz”), and another for numbers divisible only by 5 (which logs “Buzz”). I made sure those were else if statements so they wouldn’t conflict with the first condition. Finally, I wrapped it up with a default else statement, which just prints the number itself if none of the other conditions apply.
 
 	} else if (i % 3 === 0) {
 	    console.log ("Fizz")
