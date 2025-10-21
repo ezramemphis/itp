@@ -4,6 +4,8 @@
 
 This part just took like a couple minutes to make. I gave myself about 5-6 options for objects that I could try to create. The reason why I chose this object specifically is that it was going to force me to figure out many little things. 
 
+![](Phase1.jpeg)
+
 Since the head is a cube, I'd have to figure out how to create that sense of "depth" for the cube. Which I'll explain in Phase 2 how I did this. And then just the selection of different shapes that I'd have to use for the whole object would give me some nice variety. 
 
 ### Phase 2 - Translating to P5.js
@@ -16,6 +18,11 @@ So this is where it got pretty tricky, because I was still trying to figure out 
 - 2 circles (pupils)
 - 1 triangle (nose)
 - 1 line (mouth)
+
+This was what the code looked like when I threw it all in 
+
+![](images/shapes.png)
+
 
 So now that I have a sort of gameplan for what objects I needed, I just started by throwing them in. Not worried about proportions, positions, or colors quite yet. Just making sure I can see all of them on the canvas so that I can arrange them how I'd like
 
@@ -30,6 +37,9 @@ From there, it was very easy. Just messing with the sizes and positions of the o
 Also, I was trying to figure out how to get rid of the border on all of the shapes so that it would just look sleek, and I figured out how to do it in the references page too. I pretty much learned everything I needed to know for this project from there, and just to play it safe I'll link the source. 
 
 [noStroke Function](https://p5js.org/reference/p5/noStroke/)
+
+
+![](images/2.png)
 
 ### Phase 3 - Making Bobby a Function
 
@@ -46,6 +56,9 @@ I then added `scale(s)` to make sure that when I scale him bigger or smaller, al
 Lastly, I went to the very beginning and added the `push()`, and at the very end I added the `pop()`. This basically made sure that we're isolating each drawing's transformation, because I noticed without it, all of the Bobbys would just follow wahtever I set the first x, y, and s values to. And I know that it's kind of redundant to be explaining this to you since you probably know this way better than me, but I'm just tryna show that I kind of understand how it works too lol.
 
 Anyways, with those changes, now I'm able to call Bobby as much as I want, and move him and scale him anywhere with no issues at all. 
+
+
+![](images/3.png)
 
 ### Phase 4 - Tiling Bobby like a Pro
 
@@ -83,10 +96,18 @@ And lastly, time to CALL IT. But of course I had to make a last little tweak bec
 
 `Bobby(x, y + s * 0.4, s);`
 
-But there was one last issue, because of course there had to be one last one lol. And it was a relatively easy but tedious fix. The issue was that since my initial square was based off of (140,150) for the starting point, it completely threw off where the grid began. And I sort of ignored this issue in Phase 3 and did weird calls for like `Bobby(-90,-80,1)` to push it more left. Which this worked temporarily, but now I can't ignore it.
+And this is where I got stumped for a little bit. The function was supposed to work, it all looked right, theoretically there wasn't anything wrong. And there were no ERRORS, so I had no idea where I was going wrong. Why was my screen completely blank. But then I just randomly decided to test what it would look like if I changed the scale(s). And so I just randomly changed it to scale(1), and FINALLY I saw something, a glimmer of hope.
+
+![](images/4issue2.png)
+
+And let's just say at this point, I just decided to brute force my way to the solution. And I realized repolacing it with a number wasn't going to work, so I just started dividing s by whatever I could think of to get it to work. And finally, I tried out `scale(s/100)`, and it actually worked. Now I tried to google it and figure out why this was the case, and I'll be honest, I still have no idea why it made me do this and why I only needed to do it for Phase 4, but atleast it's done.
+
+But there was one last issue, because of course there had to be one last one lol. And it was a relatively easy but tedious fix. The issue was that since my initial square was based off of (140,150) for the starting point, it completely threw off where the grid began. And I sort of ignored this issue in Phase 3 and did weird calls for like `Bobby(-90,-80,1)` to push it more left. Which this worked temporarily, but now I can't ignore it. This is what the off grid looked like
+
+![](images/4issue.png)
 
 So of course the answer was obvious, but I didn't know if I had the strength to do it. But my grade was on the line, so I must. So I went through every object, and subtracted 140 from every x value and 150 from every y value. This way, I would now be shifted relative to (0,0), so it looks great. 
 
-And then the last little change, this issue was that even though our "cells" look correct, the head overall was just way way too big. But then I realized something. In Phase 3, Bobby was drawn using his original pixel positions on the canvas, so when you scaled him with `scale(s)`, it worked because the numbers already matched the size you wanted. Everything was based on the real canvas positions. And since I just moved Bobby to start at (0,0) with a fixed “base size” of 100 for the head. Now s is the target size we want him to be, but the shape itself is built for 100 units, hence why he ended up being way too big. So all I had to do was divide by 100 `scale(s/100)` to make Bobby shrink to the size we actually want. I'm not sure how to exactly explain it since I honestly discovered this on accident, but by doing scale(s/100), I'd like to think of it saying “take this 100-unit Bobby and shrink or stretch him so he’s exactly s units tall/wide.”
+![](images/4.png)
 
 So that was a lot, Phase 4 took a lot more work than I anticipated. But it's done, everything is working as it should, hopefully I didn't miss something but I'm way too tired to think straight anymore so this'll do.
