@@ -31,42 +31,21 @@ Also, I was trying to figure out how to get rid of the border on all of the shap
 
 [noStroke Function](https://p5js.org/reference/p5/noStroke/)
 
-### Phase 3 - Making a Function
+### Phase 3 - Making Bobby a Function
 
-Surprisingly enough, since I had sort of mathed out before how I did every point for the main head atleast, it was pretty easy to convert the pixels to the variables. I just put in x,y, and s for every single point as I would, and then added or took away "z" to put that depth in
+Turning the head into a function was actually fairly simple. First of all I just organized it all under a function called "Bobby" so that I can actually try and call it. And I made sure that the function was looking for the x, y, and z.
 
-Now the hardest part of this phase was actually replacing the pixels for the facial features with the variables while keeping them looking the same as before. It definitely felt a lot more restricting since I now was pretty much relying solely on percentages of the size alongside the x and y, so they all would scale and position relative to the front face (or atleast that's how I thought about it) 
+Once I had that setup, I just tested the function by running a "function draw()" and calling Bobby a few times. I knew that it wasn't going to work exactly how I wanted though because I hadn't fully setup everything, and sure enough, the scaling and everything was just pretty screwed up. 
 
-For this part, to be honest all I did was just spend a ton of time messing with the percentages until it looked sort of right. And that's what I would've said if I wasn't a GENIUS, because I actually somehow found a way to math out the scaling and convert it to the variables so it lined up exactly! Below is basically the process I did for every single point so that I could get it looking exactly right consistently. For this example, I'll show how I did it with the eyes (or atleast I'll try to, it's kind of a lot to type out)
+In order to fix everything up, I just added in everything that you instructed us to in the guide for this phase. 
 
-So here are the original eyes with just pixels
+I first added `translate(x,y)` to make sure I could properly move Bobby wherever I want on the canvas. 
 
-	// Eyes
-	arc(170, 200, 25, 20, 0, PI);  // left eye
-	arc(210, 200, 25, 20, 0, PI);  // right eye
+I then added `scale(s)` to make sure that when I scale him bigger or smaller, all of the "pixels" would stay proportional.
 
-And so I took every single value, and I calculated the "relative offset" based off of the pixels of the top left of the front face that we started with (140, 150). I used this specifically since it's sort of what everything was built off of, where it all once begun. And so here's the mathy stuff:
+Lastly, I went to the very beginning and added the `push()`, and at the very end I added the `pop()`. This basically made sure that we're isolating each drawing's transformation, because I noticed without it, all of the Bobbys would just follow wahtever I set the first x, y, and s values to. And I know that it's kind of redundant to be explaining this to you since you probably know this way better than me, but I'm just tryna show that I kind of understand how it works too lol.
 
-	eyeX_left  = 170 - 140 = 30 -> 30 / 100 = 0.3 
-	eyeX_right = 210 - 140 = 70 -> 70 / 100 = 0.7
-	eyeY       = 200 - 150 = 50 -> 50 / 100 = 0.5
-	eyeW       = 25 / 100 = 0.25
-	eyeH       = 20 / 100 = 0.2
-
-So now the formula for the eyes just looks like this
-
-	arc(x + s * 0.3, y + s * 0.5, s * 0.25, s * 0.2, 0, PI);
-	arc(x + s * 0.7, y + s * 0.5, s * 0.25, s * 0.2, 0, PI);
-
-(note it does look a little different here than in the original javascript. Here I just condensed into a couple lines of code to get the idea, but I made it look extra clean and readble in the actual script)
-
-So from here, I just did the same thing for everything else, and it ended up working out perfect. Now it probably would've been way quicker to actually just guess the percentages and get it close enough, but where's the fun in that. Now it looks perfect, and I couldn't let my Bobby just be a "close enough"
-
-Anyways after that whole adventure, the last issue that I had to troubleshoot was that when I called the function and scaled the size up and down, the "depth" stayed the same, so it would begin to look more like a rectangular prism the smaller that it got, which would be cool if I was making a caterpillar, but twas not the mission. In order to fix this, it was actually way simplier that I anticipated. Since I was offsetting by 40, and size was 100, the offset was always gonna be 40% of the size. So instead of just saying "z = 40", I switched the code to this so it stayed consistent.
-
-`let z = s * 0.4;`
-
-Now no matter how big or small it gets, we will always get that satisfying cube.
+Anyways, with those changes, now I'm able to call Bobby as much as I want, and move him and scale him anywhere with no issues at all. 
 
 ### Phase 4 - Tiling Bobby like a Pro
 
@@ -104,10 +83,10 @@ And lastly, time to CALL IT. But of course I had to make a last little tweak bec
 
 `Bobby(x, y + s * 0.4, s);`
 
-And I tried to do y + z, but it didn't work and I'm just way too tired to figure out why not, so I just did it manually. But works like a charm, looking beautiful, and I'M DONE
+But there was one last issue, because of course there had to be one last one lol. And it was a relatively easy but tedious fix. The issue was that since my initial square was based off of (140,150) for the starting point, it completely threw off where the grid began. And I sort of ignored this issue in Phase 3 and did weird calls for like `Bobby(-90,-80,1)` to push it more left. Which this worked temporarily, but now I can't ignore it.
 
-# Post Game Thoughts
+So of course the answer was obvious, but I didn't know if I had the strength to do it. But my grade was on the line, so I must. So I went through every object, and subtracted 140 from every x value and 150 from every y value. This way, I would now be shifted relative to (0,0), so it looks great. 
 
-This was fun, I learned stuff, it was cool
+And then the last little change, this issue was that even though our "cells" look correct, the head overall was just way way too big. But then I realized something. In Phase 3, Bobby was drawn using his original pixel positions on the canvas, so when you scaled him with `scale(s)`, it worked because the numbers already matched the size you wanted. Everything was based on the real canvas positions. And since I just moved Bobby to start at (0,0) with a fixed “base size” of 100 for the head. Now s is the target size we want him to be, but the shape itself is built for 100 units, hence why he ended up being way too big. So all I had to do was divide by 100 `scale(s/100)` to make Bobby shrink to the size we actually want. I'm not sure how to exactly explain it since I honestly discovered this on accident, but by doing scale(s/100), I'd like to think of it saying “take this 100-unit Bobby and shrink or stretch him so he’s exactly s units tall/wide.”
 
-But Bobbys face is gonna haunt me forever I think
+So that was a lot, Phase 4 took a lot more work than I anticipated. But it's done, everything is working as it should, hopefully I didn't miss something but I'm way too tired to think straight anymore so this'll do.

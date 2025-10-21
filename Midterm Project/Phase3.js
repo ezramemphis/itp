@@ -1,75 +1,65 @@
-/// Pretty much the same thing, now substituting to make it a function now. And this was especially easy since I was literally already using x and y values for the positioning
-
-
 function setup() {
   createCanvas(400, 400);
-  noStroke();
   background(220);
+  noStroke();
 }
 
-// Modular Bobby function
+
 function Bobby(x, y, s) {
-  let z = s * 0.4;
+  push();
+  translate(x, y);
+  scale(s);
 
   // Colors
-  let hair = color('#795548');
-  let shade = color('#C9B58D');
-  let face = color('#E7D3B0');
-  let nose = color('#A89776');
+  let hair = color('#795548'); // Hair
+  let shade = color('#C9B58D');// Side shade
+  let face = color('#E7D3B0'); // Front face
+  let nose = color('#A89776'); // Nose
 
   // Front Face
-   fill(face);
-  square(x, y, s);
-
+  fill(face);
+  square(140, 150, 100);
 
   // Hair
   fill(hair);
-  quad(x, y, 
-       x + s, y, 
-       x + s + z, y - z, 
-       x + z, y - z);
+  quad(
+    140, 150, // bottom left
+    240, 150, // bottom right
+    280, 110, // top right
+    180, 110  // top left
+  );
 
   // Side Face
   fill(shade);
-  quad(x + s, y, 
-       x + s + z, y - z, 
-       x + s + z, y + s - z, 
-       x + s, y + s);
+  quad(
+    240, 150, // top left
+    280, 110, // top right
+    280, 210, // bottom right
+    240, 250  // bottom left
+  );
 
   // Eyes
   fill(255);
-  let eyeY = y + s * 0.5;
-  let eyeW = s * 0.25;
-  let eyeH = s * 0.2;
-  arc(x + s * 0.3, eyeY, eyeW, eyeH, 0, PI);
-  arc(x + s * 0.7, eyeY, eyeW, eyeH, 0, PI);
-
+  arc(170, 200, 25, 20, 0, PI); // left eye 
+  arc(210, 200, 25, 20, 0, PI); // right eye
   fill(0);
-  let pupilY = eyeY + s * 0.03;
-  let pupilSize = s * 0.07;
-  circle(x + s * 0.3, pupilY, pupilSize);
-  circle(x + s * 0.7, pupilY, pupilSize);
+  circle(170, 205, 7); // left pupil
+  circle(210, 205, 7); // right pupil
 
   // Nose
   fill(nose);
-  triangle(
-    x + s * 0.1, y + s * 0.65,
-    x + s * 0.54, y + s * 0.6,
-    x + s * 0.5, y + s * 0.68
-  );
+  triangle(150, 215, 194, 210, 190, 218);
 
   // Mouth
   stroke(0);
-  strokeWeight(s * 0.02);
-  line(x + s * 0.25, y + s * 0.75, x + s * 0.75, y + s * 0.75);
-
-  noStroke();
+  strokeWeight(2);
+  line(165, 225, 215, 225);
+  pop();
 }
 
 function draw() {
-  // Draw multiple Bobbys (scaled faces)
-  Bobby(20, 80, 120);
-  Bobby(120, 250, 60);
-  Bobby(220, 120, 80);
-  Bobby(260, 250, 20);
+  Bobby(-90, -80, 1);
+  Bobby(0, 180, 0.5);
+  Bobby(110, 0, 0.75);
+  Bobby(20, 60, 1.25);
 }

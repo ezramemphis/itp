@@ -1,15 +1,14 @@
 function setup() {
-  createCanvas(500, 500);
-  noStroke();
+  createCanvas(400, 400);
   background(220);
-
-  // Makes sure to call the grid function at the end
+  noStroke();
   drawBobbyGrid();
 }
 
-// Modular Bobby function with proportional scaling
 function Bobby(x, y, s) {
-  let z = s * 0.4; // hair/side depth scales with face size
+  push();
+  translate(x, y);
+  scale(s/100);
 
   // Colors
   let hair = color('#795548');
@@ -17,63 +16,51 @@ function Bobby(x, y, s) {
   let face = color('#E7D3B0');
   let nose = color('#A89776');
 
-  // Front Face (square)
+  // Front Face
   fill(face);
-  square(x, y, s);
+  square(0, 0, 100);
 
   // Hair
   fill(hair);
   quad(
-    x, y,
-    x + s, y,
-    x + s + z, y - z,
-    x + z, y - z
+    0, 0,  // bottom left
+    100, 0,  // bottom right
+    140, -40,  // top right
+    40, -40  // top left
   );
 
   // Side Face
   fill(shade);
   quad(
-    x + s, y,
-    x + s + z, y - z,
-    x + s + z, y + s - z,
-    x + s, y + s
+    100, 0,  // top left
+    140, -40,  // top right
+    140, 60,  // bottom right
+    100, 100  // bottom left
   );
 
   // Eyes
   fill(255);
-  let eyeY = y + s * 0.5;
-  let eyeW = s * 0.25;
-  let eyeH = s * 0.2;
-  arc(x + s * 0.3, eyeY, eyeW, eyeH, 0, PI);
-  arc(x + s * 0.7, eyeY, eyeW, eyeH, 0, PI);
-
+  arc(30, 50, 25, 20, 0, PI);  // left eye 
+  arc(70, 50, 25, 20, 0, PI);  // right eye
   fill(0);
-  let pupilY = eyeY + s * 0.03;
-  let pupilSize = s * 0.07;
-  circle(x + s * 0.3, pupilY, pupilSize);
-  circle(x + s * 0.7, pupilY, pupilSize);
+  circle(30, 55, 7);  // left pupil
+  circle(70, 55, 7);  // right pupil
 
   // Nose
   fill(nose);
-  triangle(
-    x + s * 0.1, y + s * 0.65,
-    x + s * 0.54, y + s * 0.6,
-    x + s * 0.5, y + s * 0.68
-  );
+  triangle(10, 65, 55, 60, 50, 68);
 
   // Mouth
   stroke(0);
-  strokeWeight(s * 0.02);
-  line(x + s * 0.25, y + s * 0.75, x + s * 0.75, y + s * 0.75);
+  strokeWeight(2);
+  line(25, 75, 75, 75);
 
-  noStroke();
+  pop();
 }
 
-// Grid function to tile multiple Bobbys
-
 function drawBobbyGrid() {
-  let columns = 5; // number of tiles horizontally
-  let rows = 5;    // number of tiles vertically
+  let columns = 5;
+  let rows = 5;
   let cellW = width / columns;
   let cellH = height / rows;
 
@@ -82,10 +69,7 @@ function drawBobbyGrid() {
       let x = i * cellW;
       let y = j * cellH;
 
-      // Scale Bobby to fit the cell, with small padding
       let s = min(cellW, cellH) * 0.72;
-
-      // Adjust y slightly for the depth effect
       Bobby(x, y + s * 0.4, s);
     }
   }
