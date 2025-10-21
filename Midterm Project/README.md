@@ -4,6 +4,12 @@
 
 This part just took like a couple minutes to make. I gave myself about 5-6 options for objects that I could try to create. The reason why I chose this object specifically is that it was going to force me to figure out many little things. 
 
+This was the selection of drawings that I made during class
+
+![](images/class_sketch.png)
+
+And after some thinking and deciding what would be the best, I decided to go with the cube head. And his name is Bobby
+
 ![](Phase1.jpeg)
 
 Since the head is a cube, I'd have to figure out how to create that sense of "depth" for the cube. Which I'll explain in Phase 2 how I did this. And then just the selection of different shapes that I'd have to use for the whole object would give me some nice variety. 
