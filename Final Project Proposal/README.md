@@ -5,7 +5,7 @@
 Guitar Master is an interactive software that provides generated exercises for guitarists to reflect their Juries for each performance level.
 
 
-## 3 SPECIFIC resources you know you will use in developing your project! With Hyperlinks! Not "Rachel's Class Repository!" Not ChatGPT! Not "YouTube"!
+## 3 SPECIFIC resources you know you will use in developing your project
 
 1.) [array.findIndex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex?utm_source=chatgpt.com)
 
@@ -20,7 +20,7 @@ I would use this source to make sure that my generators output their results com
 
 This will be a guitar practice web app tool that generates exercises for guitarists to continously test themselves. It will generate random scales, chords, and arpeggios that the guitarist will have to play. It will be built to emulate the questions and requirments you're asked of for each level of your Juries as a guitarist. So ideally, if you become really solid and quick with these generated exercises, the Juries will be an absolute breeze. And sometimes it's hard to get yourself to practice or know how to thoroughly push yourself and make sure you cover every base when practcing, so hopefully this takes some of that uncertainty away. 
 
-## Will any work as part of this project overlap with any work you are doing outside of this class? For another class? Who is the professor in this class?
+## Will any work as part of this project overlap with any work you are doing outside of this class? 
 
 This project will not overlap with any work I am doing outside of this class, atleast not in the general sense. As I start fleshing out this project, I will start practicing with it everyday and really study it, seeing how I can improve it and perfect it's "flow". So I will use it to prepare for my PI juries personally, but emphasize on the word "personally".
 
@@ -86,13 +86,65 @@ Here is just me thinking about any last function that I would want to add to thi
 
 ## Outline of steps WITH A SPECIFIC CALENDAR INCLUDING DATES
 
-Just putting this as a reference, the final is due December 9th, so gotta make sure to build the dev schedule around that. Today is November 2nd so I got a bit of time, and I've already made some strides on it which I'll list below...
+Just putting this as a reference for myself as I make this, the final is due December 9th, so gotta make sure to build the dev schedule around that. Today is November 2nd so I got a bit of time, and I've already made some strides on it which I'll list below...
 
-What I already have:
+What I already have (As of 11-2-25):
 - Title screen with containers and buttons that send you to respective HTMLs for each exercise "level1_scales.html". Has two tiers, level select and exercise select.
 - Started inputting "scale data" for the scale generator exercise. Have not made the exercise functional yet though.
 
-### Development Schedule
+## Development Schedule
+
+
+#### November 7th (Week 1) - Foundations & Core Setup
+
+- Complete inputting all scales, argeggios, and chord data for Level 1 exercises
+- Make 
+
+#### November 14th (Week 2) - Core Functionality (Level 1), CSS rough sketch
+
+- Implement functional generators for the scales, arpeggios, and chord Level 1 exercises
+- Add a "generate" button that allows me to generate exercise at my own will
+- Make a functional metronome - w/ adjustable BPM
+- Take time to sketch out on paper what the CSS design should look like for title screen and exercise pages
+- Get the CSS roughly layed out
+
+#### November 21st (Week 3) - Implementation for all Levels, Auto-Mode
+
+- Taking the same process for Levels 2-4 for all 3 exercise types (should be easier since it'll already be functional, just need to change the databanks)
+- Implement an Auto Mode for all of the exercises (second intervals and measures synced with metronome)
+
+- Also, I will be continuing to work on the CSS progressively, just fine tuning it little by little
+
+#### November 28th (Week 4) - APIS, Analytics, Practice Log & Beta testing commences
+
+- I will spend most of this time getting the APIs integrated, and making sure that the chord, scale, and arpeggio generators will be able to properly coorelate with the different diagrams.
+- There will be 3 APIs. API for chord diagrams, API to generated sheet music with a staff, and an API to know what day it is (for the practice log). 
+- Figure out how to passively log simple analytics in the background to localStorage (time spent on each exericise, number of generated exercises, etc.)
+- Nice looking Practice Log (for the design, I think it should be a notebook icon on the "home page" that when you click fills the screen with a pop up with the different practice logs. It'll be synced to whatever day it is with an API too. I will automate a LPF to engage whenever this page is open to dull the music out.)
+
+- By this point, I predict that the home page and exercises page CSS's will be complete for the most part. I plan on having animated panels, button selects with hover animations, and a couple other nice little things. I will just be googling as many CSS tricks as I can to get this done, and will document every single source.
+
+- Since the website should be fully functional and look great by this point, I will officially move this into a very brief Beta testing phase to make sure that it is as great as possible. I will share the project via a GitHub repository link to all of the guitarists, and give them just a general form asking questions about their experience. And also they'll of course just text me their feedback
+
+#### December 2nd (Week 5) - Extra Features/Additions & Refinment Phase
+
+- Since I pretty much will have completed the final project by now, I will then shift into adding the extra "bonus exercises" that I mentioned before. The guitar neck memorization exercises, automatic sheet music generator, and ear training tools would be my main focus. 
+- By this point I'll probably have had some user input brought in from the Beta test, so I'll look into that, and use the information to further refine the functionality of the whole webapp.
+- Just overall refining and getting into the nitty gritty. Making that CSS sparkle like a new Camaro ZL1, and making sure this thing runs as smoothly as can be. 
+
+
+#### December 5th (Week 5 part 2) - Presentation & Final Final Touches
+
+- Hopefully by this point, I've pretty much wrapped everything up, and I can just sit back and really think about how I want to pitch and present this tool. Really run through what that will look like
+- The standard that I'm going to hold for myself is as if I'm in front of the Berklee guitar department, I'm trying to get funded to further expand the project, and I need to convince them why I'm worth their money and time. Just a solid business pitch, since this tool I do believe can hold a lot of potential.
+- I will probably just make last little tweaks, but truly at this point there shouldn't be anything else that needs to be changed
+
+#### December 9th (Week 6) - COMPLETE
+
+- Web app will be completely functional with all exercises of each level properly generating their respective things
+- All APIs will be functional and implemented
+- CSS will look great, with game-like space theme
+- You get the idea, now the project is complete, and we can take a victory lap and enjoy the finished project
 
 
 
