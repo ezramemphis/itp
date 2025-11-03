@@ -15,7 +15,22 @@ I would use this source to help generate scales, chords, or anything else from a
 
 I would use this source to make sure that my generators output their results completely randomly. And one thing I love about this website specifically as a resource is that it actually explains what "Math" is in general, and then has a very sleek way of explaining every single method of using it. You can scroll down and see what I mean here. [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) Anyways, being able to generate things randomly is a must for this project, so will definitely study this like crazy.
 
-3.) []
+3.) [Guitar Chord Charts API](https://github.com/BeauNouvelle/SwiftyGuitarChords)
+
+Just an API I will use for Chord Charts, was able get it to work so this checks out
+
+4.) [Vexflow - JavaScript Music Notation and Guitar Tablature](https://www.vexflow.com/?utm_source=chatgpt.com)
+
+Another API used for making music notation, sheet music, those kinds of things. I've used this API in the past for a previous project, so I know this definitely works too. 
+
+5.) [Javascript Dates](https://www.w3schools.com/js/js_dates.asp?utm_source=chatgpt.com)
+
+I was going to use an API to tell whatever the date was for the practice log, but I did some research and actually realized there's a way that's integrated into javascript anyways, so I don't need an API. So I will use this so that whenever you use the website, it takes you to the respective date for the practice log whenever you open it by default. I will also probabyl add a date/clock thing somewhere in my header panel too, just to add in a sense of time in the website. And this would be based off of the user's computer clock.
+
+6.) [EventListeners](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+
+As I was researching, I saw that event listeners let you do things when someone clicks or hovers on things, although I’m not totally sure how it works yet. I want to learn it so I can make the buttons on my site actually respond when you click them and move between levels and exercises, and I also want to add in a couple hover and click sound effects. 
+
 ## 1 Paragraph Overview
 
 This will be a guitar practice web app tool that generates exercises for guitarists to continously test themselves. It will generate random scales, chords, and arpeggios that the guitarist will have to play. It will be built to emulate the questions and requirments you're asked of for each level of your Juries as a guitarist. So ideally, if you become really solid and quick with these generated exercises, the Juries will be an absolute breeze. And sometimes it's hard to get yourself to practice or know how to thoroughly push yourself and make sure you cover every base when practcing, so hopefully this takes some of that uncertainty away. 
@@ -118,19 +133,20 @@ What I already have (As of 11-2-25):
 #### November 28th (Week 4) - APIS, Analytics, Practice Log & Beta testing commences
 
 - I will spend most of this time getting the APIs integrated, and making sure that the chord, scale, and arpeggio generators will be able to properly coorelate with the different diagrams.
-- There will be 3 APIs. API for chord diagrams, API to generated sheet music with a staff, and an API to know what day it is (for the practice log). 
+- There will be 2 APIs. API for chord diagrams, and an API to generated sheet music with a staff. I might also find an API for playing notes, so you can choose to hear the scales, arpeggios, chords, or whatever, but we'll see if I actually do that. Also I know there are music theory APIs, but I decided doing it all manually would be a fun challenge.
 - Figure out how to passively log simple analytics in the background to localStorage (time spent on each exericise, number of generated exercises, etc.)
 - Nice looking Practice Log (for the design, I think it should be a notebook icon on the "home page" that when you click fills the screen with a pop up with the different practice logs. It'll be synced to whatever day it is with an API too. I will automate a LPF to engage whenever this page is open to dull the music out.)
 
-- By this point, I predict that the home page and exercises page CSS's will be complete for the most part. I plan on having animated panels, button selects with hover animations, and a couple other nice little things. I will just be googling as many CSS tricks as I can to get this done, and will document every single source.
+- By this point, I predict that the home page and exercises page CSS's will be complete for the most part. I plan on having animated panels, button selects with hover animations, and a couple other nice little things. I will just be googling as many CSS tricks as I can to get this done, and will document every single source. Also I might try to find a couple fun APIs for special javascript animations or whatever else to really make it pop. I want this to look great.
 
 - Since the website should be fully functional and look great by this point, I will officially move this into a very brief Beta testing phase to make sure that it is as great as possible. I will share the project via a GitHub repository link to all of the guitarists, and give them just a general form asking questions about their experience. And also they'll of course just text me their feedback
 
-#### December 2nd (Week 5) - Extra Features/Additions & Refinment Phase
+#### December 2nd (Week 5) - Extra Features/Additions & Refinment Phase/Organization
 
 - Since I pretty much will have completed the final project by now, I will then shift into adding the extra "bonus exercises" that I mentioned before. The guitar neck memorization exercises, automatic sheet music generator, and ear training tools would be my main focus. 
 - By this point I'll probably have had some user input brought in from the Beta test, so I'll look into that, and use the information to further refine the functionality of the whole webapp.
 - Just overall refining and getting into the nitty gritty. Making that CSS sparkle like a new Camaro ZL1, and making sure this thing runs as smoothly as can be. 
+- I will also definitely spend a bit of this time really organzing all of the files in the project folder so that everything looks tidy, which I will probably do automatically as I put the website together anyways. Like all the exercise htmls in a folder, each in their own "level" folder, all the assets in a folder, all the music in a folder, etc.
 
 
 #### December 5th (Week 5 part 2) - Presentation & Final Final Touches
