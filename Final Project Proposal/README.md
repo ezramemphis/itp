@@ -28,17 +28,19 @@ Also off topic, but I have reached out to a few guitarist already, and it looks 
 
 ## In the world of software, most everything takes longer to implement than you expect. And so it's not uncommon to accomplish less in a fixed amount of time than you hope.
 
-## Warning, I wrote a crap ton. If you're in a rush, just read the bulletpoints, recaps everything as a list of features.
+## ⚠️ Warning! I wrote a crap ton. If you're in a rush, just read the bulletpoints, it recaps everything as a list of features.
+
 ### In a sentence (or list of features), define a GOOD outcome for your final project. I.e., what WILL you accomplish no matter what?
 
 At the bare minimum, this website is going to have 3 functional "exercises". This will be for scales, chords, and arpeggios. Once I get that baseline functionality going, modifying them for each level shouldn't be hard at all, since it's just modifying the "databases" for each different exercise level to match what the juries ask for. For example, Level 1 scales will be regular modes, Level 2 will be melodic minor modes, and Level 3 will be harmonic minor modes, etc. There are 4 levels (atleast for non guitar performance majors, only principles), so I'll be rocking with that.
 
 Also pretty simple, I need to make a metronome (with adjustable sounds hopefully). Just kind of a bare minimum, you need a metronome for when you practice. 
 
+#### List of Features
+
 - 3 Functional Exercises (Scales, Chords, Arpeggios)
 - Upscaling for each level (1-4)
 - Metronome with adjustable BPM
-- j
 
 ### In a sentence (or list of features), define a BETTER outcome for your final project. I.e., what do you THINK you can accomplish before the final project's deadline?
 
@@ -47,6 +49,8 @@ I want to implement an "auto mode" for each exercise, just for a little nicer an
 I definitely want to implement a few APIs, mostly just to show off chord charts, scales, and arpeggios. So that if you want to toggle on "help" when practicing so you can see charts and shapes to help guide your practice, that will generate alongside your practice simultaneously. Not sure if I want more APIs than that, but definitely APIs to help with those things.
 
 A practice log implementation would be really nice too, where every day you can quickly right down whatever you worked on, what you struggled with, and anything else that is worth documenting. And in that practice log for each day, I'll have a little statistics thing show for how long you practiced each exercise, how many times you "generated" each exercise, and whatever other fun statistics I can think of. And all of this will be saved to localStorage (eventually to an account, but let's be realistic), so that whenever you come back to the web app, you'll always see those notes and statistics for each day. 
+
+#### List of Features
 
 - Auto mode for generating exercisee
 - API implementation (chord charts, scales and arpeggios on staff)
@@ -60,7 +64,7 @@ For even more detail, I'm thinking of a space theme. I have seen some videos on 
 
 Also for the title screen, there will be a couple containers to hold buttons and other things, I want them to be transparent and have a glassy look to them. So I'll look up how to get a glassy look and figure that out for the containers. 
 
-#### Aesthetics
+#### List of Features - Aesthetics
 
 - Strong theme/Beautiful CSS
 - Background music for title screen
@@ -70,7 +74,7 @@ Also for the title screen, there will be a couple containers to hold buttons and
 - Achievements, titles, little rewards to make you feel like a champ
 - Friending (definitely will not be able to do this, but I might rig a fake preset one where I friend Taylor or something and you can see his "profile". Getting it to actually function though is a whole other battle that I am far too intimidated to trek)
 
-#### Fine Detail Addition
+#### List of Features - Last Additions
 
 Here is just me thinking about any last function that I would want to add to this software. Unlikely I'll be able to get everything, but I'll try my best lol. 
 
