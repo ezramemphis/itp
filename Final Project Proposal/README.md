@@ -13,7 +13,9 @@ I would use this source to help generate scales, chords, or anything else from a
 
 2.) [Math.random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
 
-I would use this source to make sure that my generators output their results completely randomly. And one thing I love about this website specifically as a resource is that it actually explains what "Math" is in general, and then has a very sleek way of explaining every single method of using it. You can scroll down and see what I mean here. [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) Anyways, being able to generate things randomly is a must for this project, so will definitely study this like crazy.
+I would use this source to make sure that my generators output their results completely randomly. And one thing I love about this website specifically as a resource is that it actually explains what "Math" is in general, and then has a very sleek way of explaining every single method of using it. You can scroll down and see what I mean here. [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) 
+
+Anyways, being able to generate things randomly is a must for this project, so will definitely study this like crazy.
 
 3.) [Guitar Chord Charts API](https://github.com/BeauNouvelle/SwiftyGuitarChords)
 
