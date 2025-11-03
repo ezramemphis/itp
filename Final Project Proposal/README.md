@@ -28,6 +28,7 @@ Also off topic, but I have reached out to a few guitarist already, and it looks 
 
 ## In the world of software, most everything takes longer to implement than you expect. And so it's not uncommon to accomplish less in a fixed amount of time than you hope.
 
+## Warning, I wrote a crap ton. If you're in a rush, just read the bulletpoints, recaps everything as a list of features.
 ### In a sentence (or list of features), define a GOOD outcome for your final project. I.e., what WILL you accomplish no matter what?
 
 At the bare minimum, this website is going to have 3 functional "exercises". This will be for scales, chords, and arpeggios. Once I get that baseline functionality going, modifying them for each level shouldn't be hard at all, since it's just modifying the "databases" for each different exercise level to match what the juries ask for. For example, Level 1 scales will be regular modes, Level 2 will be melodic minor modes, and Level 3 will be harmonic minor modes, etc. There are 4 levels (atleast for non guitar performance majors, only principles), so I'll be rocking with that.
