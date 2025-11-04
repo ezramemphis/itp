@@ -100,6 +100,8 @@ Here is just me thinking about any last function that I would want to add to thi
 - There are a few more things you're tested on during the juries that I haven't mentioned yet, because certain things you're only tested on in one of the levels, versus these 3 exercises we've discussed are present in every single level. So getting into the nitty gritty to get every single exercise you could need incorporated would be great, but would take a lot of time. 
 - Bonus exercises - outside of the levels and typical exercises. Guitar neck memorization exercises, automatic sheet music generator (sight reading factory dupe, but free), practice scales in context of chord progressions, ear training tools, the list goes on and on. If I have extra time, this could be cool. 
 - Listen Mode - AI listens to you play your scales and arpeggios, grades on accuracy, and tells you how you can improve. (No yea this is not happening, but a boy can dream)
+- Speed Up mode - When practicing scales arpeggios and use auto-mode, there's an option to choose the BPM to progressively go up over time, maybe ever 5 scales/arpeggios, it goes 5BPM. And so within 20 scales you've gone up from  120 to 140BPM, and onwards until you're really flying
+
 
 ## Outline of steps WITH A SPECIFIC CALENDAR INCLUDING DATES
 
