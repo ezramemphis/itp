@@ -11,7 +11,7 @@
 
 ## Self Assessment
 
-I feel like I contributed a solid amount to the project. I sort of took the lead on really sketching out what the HTML and CSS would look like since I'm fairly familiar with how to structure all of that together. And I made sure to turn to the rest of the band whenever I made any edits or decisions to make sure that everyone liked how it was looking. 
+I feel like I contributed a solid amount to the project. I sort of took the lead on really sketching out what the HTML and CSS would look like since I'm fairly familiar with how to structure all of that together. And I made sure to turn to the rest of the band whenever I made any edits or decisions to make sure that everyone liked how it was looking. And I also wrote my own artist description for myself. 
 
 ## Group Members
 
